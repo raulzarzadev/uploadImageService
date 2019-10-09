@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="/images/add" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Titulo de la Imagen" type="text" name="title">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Descripcion de la imagen"
+                            name="description"></textarea>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
+                            <label for="inputGroupFile01" class="custom-file-label">Elegir archivo</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Subir Imagen</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    Title
+                </tr>
+                <tr>
+                    Descripcion
+                </tr>
+                <tr>
+                    Operation
+                </tr>
+            </thead>
+            <tbody>
+                {{#each photos}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td><a class="btn btn-primary" href="{{imageURL}}" target="_blank">Ver</a>
+                        <a class="btn btn-danger" href="/images/delete/{{_id}}">Borrar</a>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+</div>
