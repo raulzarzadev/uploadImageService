@@ -10,6 +10,6 @@ RUN npm install --quiet
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 4042
 
-CMD node index.js
+CMD npm start
