@@ -1,7 +1,5 @@
-if(process.env.NODE_ENV !== 'produccion'){
-    require('dotenv').config();
-}
-
+const dotenv = require('dotenv')
+dotenv.config()
 const app = require('./app');
 
 app.listen(app.get('port'), () => {
