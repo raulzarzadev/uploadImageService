@@ -11,7 +11,7 @@ require('./database');
 
 //settings
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.UPLOAD_IMAGE_PORT || 4042);
 
 // Middlewares
 
