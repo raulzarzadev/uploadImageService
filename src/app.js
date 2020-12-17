@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const multer = require('multer')
 const path = require('path')
+const cors = require("cors")
 
 // initializations
 
@@ -15,6 +16,7 @@ app.set('port', process.env.UPLOAD_IMAGE_PORT || 4042);
 
 // Middlewares
 
+app.use(cors())
 app.use(morgan('dev'));
 
 app.use(express.json());

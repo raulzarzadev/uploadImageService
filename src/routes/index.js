@@ -1,8 +1,5 @@
 const { Router } = require("express");
 const router = Router();
-const cors = require("cors")
-
-app.use(cors())
 
 const Photo = require("../models/Photo");
 const cloudinary = require("cloudinary");
