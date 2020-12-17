@@ -1,0 +1,25 @@
+@uploadImageServ = http://localhost:4042
+
+### POST IMAGE
+
+POST {{uploadImageServ}}/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="title"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+e/png
+
+< ./1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### GET IMAGES
+
+GET {{uploadImageServ}}
+Content-Type:  application/json
+
+

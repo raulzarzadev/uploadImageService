@@ -9,7 +9,6 @@ const app = express();
 require('./database');
 
 
-
 //settings
 
 app.set('port', process.env.PORT || 3000);
