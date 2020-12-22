@@ -19,7 +19,6 @@ router.get("/", async (req, res) => {
 
 router.post("/upload", async (req, res) => {
   const { title } = req.body;
-
   try {
     const result = await cloudinary.v2.uploader.upload(req.file.path, {
       tags: ["NegDelBar", "negocios"],
@@ -30,7 +29,7 @@ router.post("/upload", async (req, res) => {
       title,
       imageURL: result.url,
       public_id: result.public_id,
-      tags: result.tags
+      tags: result.tags,
     });
     await newPhoto.save();
     res.json({ message: "uploaded", ok: true, image: newPhoto });
