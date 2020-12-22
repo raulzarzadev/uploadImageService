@@ -7,5 +7,5 @@ mongoose
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
-  .then((db) => console.log("DB is connected"))
+  .then((db) => console.log("uploadImageDB is connected"))
   .catch((err) => console.error(err));
