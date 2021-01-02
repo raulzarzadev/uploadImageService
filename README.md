@@ -1,6 +1,8 @@
-#  Upload Images
+#  Microservvico para subir Images
 
-Microservicio para subir imagenes 
+Microservicio para subir imagenes a cloudinari
+
+La capa gratuita de cloudinari tiene excelente capacidad para hacer pruebas de forma rapida y confiable.
 
 # Tecnologias
 
@@ -12,4 +14,7 @@ MONGODB_URI
 CLOUDINARY_CLOUD_NAME,
 CLOUDINARY_API_KEY,
 CLOUDINARY_API_SECRET
-PORT
+UPLOAD_IMAGE_PORT
+
+
+
